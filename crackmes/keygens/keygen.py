@@ -42,7 +42,7 @@ class Keygen():
         if self.is_debug():
             self.__logger.debug(message)
 
-    def login_routine (self):
+    def login_routine(self):
         raise NotImplementedError
 
     def serial_key_routine(self):
