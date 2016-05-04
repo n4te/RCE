@@ -42,5 +42,5 @@ if __name__ == '__main__':
         print('[*] Use CRACKME.py login')
     else:
         login = sys.argv[1]
-        crackme = CRACKME(login, debug=True)
+        crackme = CRACKME(login)
         crackme()
