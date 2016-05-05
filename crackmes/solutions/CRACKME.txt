@@ -1,0 +1,71 @@
+
+00401228   . 68 8E214000    PUSH OFFSET <CRACKME.Name>
+0040122D   . E8 4C010000    CALL <CRACKME.login_routine>
+00401232   . 50             PUSH EAX
+00401233   . 68 7E214000    PUSH OFFSET <CRACKME.Serial_key>
+00401238   . E8 9B010000    CALL <CRACKME.serial_key_routine>
+0040123D   . 83C4 04        ADD ESP,4
+00401240   . 58             POP EAX
+00401241   . 3BC3           CMP EAX,EBX                                  ;  EAX(hash_login)==EBX(hash_serial_key)
+00401243   . 74 07          JE SHORT CRACKME.0040124C
+00401245 > . E8 18010000    CALL <CRACKME.MessageBox(no_luck)>
+0040124A   .^EB 9A          JMP SHORT CRACKME.004011E6
+0040124C   > E8 FC000000    CALL <CRACKME.MessageBox(good_work)>
+
+004012B5  |. 6A 0B          PUSH 0B                                      ; Count = B (11.)
+004012B7  |. 68 8E214000    PUSH OFFSET <CRACKME.Name>                   ; Buffer = OFFSET <CRACKME.Name>
+004012BC  |. 68 E8030000    PUSH 3E8                                     ; ControlID = 3E8 (1000.)
+004012C1  |. FF75 08        PUSH DWORD PTR SS:[EBP+8]                    ; hWnd
+004012C4  |. E8 07020000    CALL <JMP.&USER32.GetDlgItemTextA>           ; GetDlgItemTextA
+
+004012D5  |. 6A 0B          PUSH 0B                                      ; Count = B (11.)
+004012D7  |. 68 7E214000    PUSH OFFSET <CRACKME.Serial_key>             ; Buffer = OFFSET <CRACKME.Serial_key>
+004012DC  |. 68 E9030000    PUSH 3E9                                     ; ControlID = 3E9 (1001.)
+004012E1  |. FF75 08        PUSH DWORD PTR SS:[EBP+8]                    ; hWnd
+004012E4  |. E8 E7010000    CALL <JMP.&USER32.GetDlgItemTextA>           ; GetDlgItemTextA
+
+0040137E >/$ 8B7424 04      MOV ESI,DWORD PTR SS:[ESP+4]
+00401382  |. 56             PUSH ESI
+00401383  |> 8A06           /MOV AL,BYTE PTR DS:[ESI]
+00401385  |. 84C0           |TEST AL,AL
+00401387  |. 74 13          |JE SHORT CRACKME.0040139C
+00401389  |. 3C 41          |CMP AL,41
+0040138B  |. 72 1F          |JB SHORT CRACKME.004013AC
+0040138D  |. 3C 5A          |CMP AL,5A
+0040138F  |. 73 03          |JNB SHORT CRACKME.00401394
+00401391  |. 46             |INC ESI
+00401392  |.^EB EF          |JMP SHORT CRACKME.00401383
+00401394  |> E8 39000000    |CALL CRACKME.004013D2
+00401399  |. 46             |INC ESI
+0040139A  |.^EB E7          \JMP SHORT CRACKME.00401383
+0040139C  |> 5E             POP ESI
+0040139D  |. E8 20000000    CALL CRACKME.004013C2
+004013A2  |. 81F7 78560000  XOR EDI,5678
+004013A8  |. 8BC7           MOV EAX,EDI
+004013AA  |. EB 15          JMP SHORT CRACKME.004013C1
+004013AC  |> 5E             POP ESI
+004013AD  |. 6A 30          PUSH 30                                       ; /Style = MB_OK|MB_ICONEXCLAMATION|MB_APPLMODAL
+004013AF  |. 68 60214000    PUSH CRACKME.00402160                         ; |Title = "No luck!"
+004013B4  |. 68 69214000    PUSH CRACKME.00402169                         ; |Text = "No luck there, mate!"
+004013B9  |. FF75 08        PUSH DWORD PTR SS:[EBP+8]                     ; |hOwner
+004013BC  |. E8 79000000    CALL <JMP.&USER32.MessageBoxA>                ; \MessageBoxA
+004013C1  \> C3             RETN
+
+004013D8 >/$ 33C0           XOR EAX,EAX
+004013DA  |. 33FF           XOR EDI,EDI
+004013DC  |. 33DB           XOR EBX,EBX
+004013DE  |. 8B7424 04      MOV ESI,DWORD PTR SS:[ESP+4]
+004013E2  |> B0 0A          /MOV AL,0A
+004013E4  |. 8A1E           |MOV BL,BYTE PTR DS:[ESI]
+004013E6  |. 84DB           |TEST BL,BL
+004013E8  |. 74 0B          |JE SHORT CRACKME.004013F5
+004013EA  |. 80EB 30        |SUB BL,30
+004013ED  |. 0FAFF8         |IMUL EDI,EAX
+004013F0  |. 03FB           |ADD EDI,EBX
+004013F2  |. 46             |INC ESI
+004013F3  |.^EB ED          \JMP SHORT CRACKME.004013E2
+004013F5  |> 81F7 34120000  XOR EDI,1234
+004013FB  |. 8BDF           MOV EBX,EDI
+004013FD  \. C3             RETN
+
+
