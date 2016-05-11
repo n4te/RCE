@@ -25,8 +25,11 @@ Source fd.c:
         }
         printf("learn about Linux file IO\n");
         return 0;
-    }                                                                            
-Solution:
+    }
+
+Solution
+
+Solver:
 '''
 
 from pwn import *
@@ -43,6 +46,8 @@ print '[+] Flag:', flag.rstrip()
 s.close()
 
 '''
+Log:
+
 [+] Connecting to pwnable.kr on port 2222: Done
 [+] Flag: mommy! I think I know what a file descriptor is!!
 good job :)
