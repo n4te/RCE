@@ -2,6 +2,7 @@
 Description:
 
     Mommy! what is a file descriptor in Linux?
+
     ssh fd@pwnable.kr -p2222 (pw:guest)
 
 Source fd.c:
