@@ -1,5 +1,4 @@
 '''
-
 Description:
     
     Daddy, teach me how to use random value in programming! 
