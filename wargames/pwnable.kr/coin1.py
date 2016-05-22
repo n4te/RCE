@@ -88,7 +88,6 @@ while b:
     array = phase1(array)
     result = phase2(array)
     data = result[result.find("N="):]
-#    print data
     b -= 1
 s.close()
 ' > coin1.py; python coin1.py > coin1.log; cat coin1.log;
