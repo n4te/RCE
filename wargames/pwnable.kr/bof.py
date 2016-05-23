@@ -64,5 +64,5 @@ $ cat flag
 daddy, I just pwned a buFFer :)
 $ 
 [*] Interrupted
-[*] Closed connection to pwnable.kr port 9000
+[*] Closed connection to pwnable.kr port 9000 
 '''
