@@ -10,6 +10,10 @@ Description:
 
 Solution:
     
+    $ ./checksec.sh --file ascii_easy 
+    RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
+    Partial RELRO   No canary found   NX enabled    No PIE          No RPATH   No RUNPATH   ascii_easy
+
     ulimit -s unlimited
     
     Dump of assembler code for function main:
