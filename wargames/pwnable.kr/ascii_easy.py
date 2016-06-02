@@ -14,6 +14,26 @@ Solution:
     RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
     Partial RELRO   No canary found   NX enabled    No PIE          No RPATH   No RUNPATH   ascii_easy
 
+    $ cat /proc/self/maps
+    00400000-0040b000 r-xp 00000000 08:01 2621524                            /bin/cat
+    0060a000-0060b000 r--p 0000a000 08:01 2621524                            /bin/cat
+    0060b000-0060c000 rw-p 0000b000 08:01 2621524                            /bin/cat
+    00660000-00681000 rw-p 00000000 00:00 0                                  [heap]
+    7fc51bc07000-7fc51bed0000 r--p 00000000 08:01 3937866                    /usr/lib/locale/locale-archive
+    7fc51bed0000-7fc51c085000 r-xp 00000000 08:01 1835025                    /lib/x86_64-linux-gnu/libc-2.15.so
+    7fc51c085000-7fc51c285000 ---p 001b5000 08:01 1835025                    /lib/x86_64-linux-gnu/libc-2.15.so
+    7fc51c285000-7fc51c289000 r--p 001b5000 08:01 1835025                    /lib/x86_64-linux-gnu/libc-2.15.so
+    7fc51c289000-7fc51c28b000 rw-p 001b9000 08:01 1835025                    /lib/x86_64-linux-gnu/libc-2.15.so
+    7fc51c28b000-7fc51c290000 rw-p 00000000 00:00 0 
+    7fc51c290000-7fc51c2b2000 r-xp 00000000 08:01 1835041                    /lib/x86_64-linux-gnu/ld-2.15.so
+    7fc51c4a3000-7fc51c4a6000 rw-p 00000000 00:00 0 
+    7fc51c4b0000-7fc51c4b2000 rw-p 00000000 00:00 0 
+    7fc51c4b2000-7fc51c4b3000 r--p 00022000 08:01 1835041                    /lib/x86_64-linux-gnu/ld-2.15.so
+    7fc51c4b3000-7fc51c4b5000 rw-p 00023000 08:01 1835041                    /lib/x86_64-linux-gnu/ld-2.15.so
+    7fffd89bc000-7fffd89dd000 rw-p 00000000 00:00 0                          [stack]
+    7fffd89fe000-7fffd8a00000 r-xp 00000000 00:00 0                          [vdso]
+    ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
     ulimit -s unlimited
     
     Dump of assembler code for function main:
