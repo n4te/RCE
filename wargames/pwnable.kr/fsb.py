@@ -1,5 +1,4 @@
 '''
-
 Description:
 
     Isn't FSB almost obsolete in computer security?
