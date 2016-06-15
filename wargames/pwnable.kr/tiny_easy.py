@@ -1,5 +1,4 @@
 '''
-
 Description:
 
     I made a pretty difficult pwn task.
