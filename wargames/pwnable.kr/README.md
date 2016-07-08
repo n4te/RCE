@@ -17,7 +17,7 @@
 * [+] cmd2
 * [+] uaf
 * codemap
-* memcpy
+* [+] memcpy
 
 #[Rookiss]
 

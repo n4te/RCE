@@ -144,9 +144,8 @@ host    = 'pwnable.kr'
 port    = 2222
 command = '''
 cd /tmp; echo "
-#from pwn import *
+from pwn  import *
 from time import sleep
-from pwn import *
 import sys
 
 path = [8, 16, 37, 69, 133, 277, 517, 1029, 2053, 4096]
