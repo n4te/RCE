@@ -20,6 +20,7 @@
 .text:00401073                 call    WriteFile
 ```
 
+The binary does XOR operation using a single byte key and compares it with a hardcoded array.
 ##Array of byte_402140:
 
 ```asm
@@ -47,4 +48,9 @@
 .data:00402155                 db  1Eh
 .data:00402156                 db  12h
 .data:00402157                 db  10h
+```
+##After using a solver.inc script the flag reveals at the 0x00402140 address
+
+```asm
+.data:00402140 aBunny_sl0pe@fl db 'bunny_sl0pe@flare-on.com',0 ; DATA XREF: start+55r
 ```
