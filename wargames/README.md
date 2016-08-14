@@ -6,3 +6,5 @@
 * https://www.hackthissite.org/
 * https://github.com/Vector35/PwnAdventureZ
 * https://picoctf.com
+* http://flare-on.com/
+* http://labyrenth.com/
