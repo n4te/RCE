@@ -1,4 +1,4 @@
-##The logic of the program:
+##The logic of the program
 
 ```asm
 .text:0040104B                 xor     ecx, ecx
@@ -21,7 +21,7 @@
 ```
 
 The binary does XOR operation using a single byte key and compares it with a hardcoded array.
-##The array of the cypher email:
+##The array of the cypher email
 
 ```asm
 .data:00402140 byte_402140     db  1Fh                 ; DATA XREF: start+55r

@@ -1,4 +1,4 @@
-##The logic of the program is contained in sub_401084 function:
+##The logic of the program is contained in sub_401084 function
 ```asm
 .text:00401084 sub_401084      proc near               ; CODE XREF: sub_401000+5Fp
 .text:00401084
@@ -61,7 +61,7 @@
 .text:004010DE sub_401084      endp
 .text:004010DE
 ```
-##The array of the cypher email:
+##The array of the cypher email
 ```asm
 .text:004010E4                 db 0AFh
 .text:004010E5                 db 0AAh
@@ -101,7 +101,7 @@
 .text:00401107                 db  9Ah ; Ü
 .text:00401108                 db 0A8h ; ¿
 ```
-##After using a solver.py script got the email:
+##After using a solver.py script got the email
 Email: a_Little_b1t_harder_plez@flare-on.com
 ##Got message
 Great job, you're really knocking these out! Here's the next binary for your goaty enjoyment. The password to the zip archive is "flare" again.
