@@ -54,3 +54,11 @@ The binary does XOR operation using a single byte key and compares it with a har
 ```asm
 .data:00402140 aBunny_sl0pe@fl db 'bunny_sl0pe@flare-on.com',0 ; DATA XREF: start+55r
 ```
+##Got message
+Congrats! I've attached the next challenge for your reversing pleasure. The password to this zip archive is "flare".
+
+This challenge looks a lot like the last one so hopefully you'll knock this one out too, Good luck!
+
+-FLARE
+
+
