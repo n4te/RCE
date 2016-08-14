@@ -1,4 +1,4 @@
-##Logic of program:
+##The logic of the program:
 
 ```asm
 .text:0040104B                 xor     ecx, ecx
@@ -21,7 +21,7 @@
 ```
 
 The binary does XOR operation using a single byte key and compares it with a hardcoded array.
-##Array of byte_402140:
+##The array of the cypher email:
 
 ```asm
 .data:00402140 byte_402140     db  1Fh                 ; DATA XREF: start+55r
@@ -49,7 +49,7 @@ The binary does XOR operation using a single byte key and compares it with a har
 .data:00402156                 db  12h
 .data:00402157                 db  10h
 ```
-##After using a solver.inc script the flag reveals at the 0x00402140 address
+##After using a solver.inc script the email reveals at the 0x00402140 address
 
 ```asm
 .data:00402140 aBunny_sl0pe@fl db 'bunny_sl0pe@flare-on.com',0 ; DATA XREF: start+55r
