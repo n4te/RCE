@@ -90,7 +90,7 @@ def O000OOOOOO0OOOO00000OO0O0O000OO0(self):
         self.OO0O0O0O0OO0OO00000OO00O0O0000O0.setVisible(True)
 ```
 Email: Elfie.L0000ves.YOOOO@flare-on.com
-## Got message
+## Got a message
 Very good. I am most pleased with your progress. Attached is the next challenge and the password to the zip archive is "flare" again.
 
 Despite what they say about you, I think you're doing great.

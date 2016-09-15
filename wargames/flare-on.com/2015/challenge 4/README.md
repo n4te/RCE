@@ -13,7 +13,7 @@ youPecks: PE32 executable (console) Intel 80386, for MS Windows, UPX compressed
 00DF3A9B     E8 D0010000      CALL youPecks.00DF3C70
 ...
 ```
-##The program take a single argument
+##The program takes a single argument
 ```asm
 ...
 00BD14EE   837D 08 02       CMP DWORD PTR SS:[EBP+8],2
@@ -24,7 +24,7 @@ youPecks: PE32 executable (console) Intel 80386, for MS Windows, UPX compressed
 00BD1564   FF15 F450BD00    CALL DWORD PTR DS:[BD50F4]               ; MSVCR100.atoi
 ...
 ```
-##Wrote a script for brute force the argument
+##Wrote a script for the brute force of the argument
 ```py
 import os, sys
 for i in xrange(0, 15):
@@ -55,7 +55,7 @@ Uhr1thm3tic@flare-on.com
 
 Email: Uhr1thm3tic@flare-on.com
 
-## Got message
+## Got a message
 
 You make it look easy. Are you some sort of wizard? Our cyberspace commandos captured some network traffic and a program they think may be responsible but the turbo hackers nuked everything else. Find the key, the password to the zip archive is "flare" once again.
 

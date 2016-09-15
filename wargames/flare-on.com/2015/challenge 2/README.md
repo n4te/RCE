@@ -103,7 +103,7 @@
 ```
 ##After using a solver.py script got the email
 Email: a_Little_b1t_harder_plez@flare-on.com
-##Got message
+##Got a message
 Great job, you're really knocking these out! Here's the next binary for your goaty enjoyment. The password to the zip archive is "flare" again.
 
 Keep up the good work, and good luck!
