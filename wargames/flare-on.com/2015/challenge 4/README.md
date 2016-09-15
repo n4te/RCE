@@ -30,7 +30,7 @@ import os, sys
 for i in xrange(0, 15):
     os.system('C:\\Users\\user\\Downloads\\youPecks.exe' + ' ' + str(i))
 ```
-##Brute force the argument
+##Brute force is run
 ```sh
 $ python.exe brute.py
 
